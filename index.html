@@ -1,810 +1,658 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
+	<!-- Required meta tags -->
 	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Recommended ESO Addons</title>
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="https://unpkg.com/bulma-modal-fx/dist/css/modal-fx.min.css" />
+
+	<title>Recommended ESO Addons</title>
 </head>
-<body class="has-navbar-fixed-top">
+<body id="top" class="bg-light">
 
-<nav class="navbar is-fixed-top is-dark" role="navigation" aria-label="main navigation">
-	<div id="navbarBasicExample" class="navbar-menu">
-		<div class="navbar-start">
-			<a class="navbar-item" href="#minion">Install Minion</a>
-			<a class="navbar-item" href="#ui">UI Addons</a>
-			<a class="navbar-item" href="#map">Map Addons</a>
-			<a class="navbar-item" href="#crafting">Crafting Addons</a>
-			<a class="navbar-item" href="#combat">Combat Addons</a>
-			<a class="navbar-item" href="#misc">Misc. Addons</a>
-			<a class="navbar-item" href="#libs">Additional Files</a>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="collapse navbar-collapse js-scroll-trigger" id="navbarText">
+		<ul class="navbar-nav mr-auto">
+			<li class="nav-item"><a class="nav-link" href="#minion">Install Minion</a></li>
+			<li class="nav-item"><a class="nav-link" href="#ui">UI Addons</a></li>
+			<li class="nav-item"><a class="nav-link" href="#map">Map Addons</a></li>
+			<li class="nav-item"><a class="nav-link" href="#crafting">Crafting Addons</a></li>
+			<li class="nav-item"><a class="nav-link" href="#combat">Combat Addons</a></li>
+			<li class="nav-item"><a class="nav-link" href="#misc">Misc. Addons</a></li>
+			<li class="nav-item"><a class="nav-link" href="#libs">Additonal Files</a></li>
+		</ul>
+	</div>
+	<span class="navbar-text">* means optional addon</span>
+</nav><!-- END .navbar -->
+
+<main role="main">
+
+	<section class="jumbotron text-center">
+		<div class="container">
+			<h1 class="jumbotron-heading">Recommended ESO Addons</h1>
+			<p class="lead text-muted">This is a curated list of addons I found to be the most helpful in ESO so far. You can either choose to install them all, and enable/disable the ones you like in game, or simply install the ones that do not include an * beside it's name.</p>
+		</div>
+	</section>
+
+	<section id="minion" class="bg-light">
+		<div class="container">
+			<div class="row">
+				<div class="col-12  mb-4">
+					<h2>Installing Minion</h2>
+					<p>Minion makes installing addons for ESO very simple. It isn't required, but it is the recommended way to install addons into the game. Should you wish to manually install addons, you'll have to download all of the addons, extra dependencies, and extra library files needed then extract them into the following folder: <code>C:\Users\YOUR-USERNAME\Documents\Elder Scrolls Online\live\AddOns</code>. The rest of this section will cover how to install and configure Minion.</p>
+					<ol>
+						<li>Head over to the <a href="https://minion.gg/?download">Minion Download Page</a> and download the <strong>32-bit Version Installer</strong>. Save the file to your desktop so it will be easy to find.</li>
+						<li>Navigate to you desktop, right-click on Minion3.0.5-32bit.exe, then left click on "Run as administrator."</li>
+						<li>Change the installation folder for Minion. Since all of my games install to my G Drive, I placed it there. You should pick either your C or D drives, depending on your computer. <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modal-install">View Image</button></li>
+						<li>Uncheck "Launch Minion" on the final page and click "Finish". <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modal-uncheck">View Image</button></li>
+						<li>Follow the instructions here to allow Minion through the Windows firewall: <a href="https://www.dummies.com/computers/operating-systems/windows-10/how-to-change-windows-10-firewall-settings-to-allow-certain-programs/" target="new">How to Change Windows 10 Firewall Settings to Allow Certain Programs</a></li>
+						<li>Right-click on Minion in your Start menu and choose "Run as administrator" then allow the program to update. Relaunch minion by running it as administrator again.</li>
+						<li>One the main Minion page, uncheck World of Warcraft from the games list and check "Remember settings" at the bottom, then click contine. <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modal-games">View Image</button></li>
+						<li>One the following page, select or deselect the hard drives you need. In my case, I have games installed to C and D, so I left those selected. Check "Remember settings" at the bottom and click continue. <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modal-drives">View Image</button></li>
+						<li>One the last screen that pops up, click on Elder Scrolls Online and navigate the new window to this location: <code>C:\Users\YOUR-USERNAME\Documents\Elder Scrolls Online\live\AddOns</code>. Be sure to select the correct folder under "Documents". <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modal-folder">View Image</button></li>
+						<li>Install everything that you want from the sections below by clicking on "Find More" and searching for the name of the addon or library.</li>
+					</ol>
+				</div>
+			</div>
+		</div>
+	</section><!-- END #minion -->
+
+	<section id="ui">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 mb-4">
+					<h2>UI Addons</h2>
+				</div>
+				<div class="col-md-4 mb-4">
+					<div class="card mb-4 box-shadow h-100">
+						<img class="card-img-top" src="img/ui/darkui.png" alt="DarkUI">
+						<div class="card-body">
+							<h5 class="card-title">DarkUI</h5>
+							<p class="card-text">This addon is a reskin of many of the default ESO textures to a smoother and more subdued UI. DarkUI focuses only on changing textures to improve the look and feel of ESO while being compatible with all other addons and having no performance impact.</p>
+						</div>
+						<div class="card-footer text-muted">
+							<div class="btn-group">
+								<button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#modal-darkui">Recommended Settings</button>
+								<button type="button" class="btn btn-sm btn-outline-secondary"><a href="https://www.esoui.com/downloads/info1576-DarkUI.html" target="_blank">View Website</a></button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 mb-4">
+					<div class="card mb-4 box-shadow h-100">
+						<img class="card-img-top" src="img/ui/lui.png" alt="Lui Extended">
+						<div class="card-body">
+							<h5 class="card-title">Lui Extended</h5>
+							<p class="card-text">LUI Extended is an addon that adds multiple custom components including: Base Game enhancements, Buff & Debuff Tracking, Combat Info, and much more!</p>
+						</div>
+						<div class="card-footer text-muted">
+							<div class="btn-group">
+								<button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#modal-lui">Recommended Settings</button>
+								<button type="button" class="btn btn-sm btn-outline-secondary"><a href="https://www.esoui.com/downloads/info818-LuiExtended.html" target="_blank">View Website</a></button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 mb-4">
+					<div class="card mb-4 box-shadow h-100">
+						<img class="card-img-top" src="img/ui/srendarr.jpg" alt="S'Rendarr">
+						<div class="card-body">
+							<h5 class="card-title">S'Rendarr</h5>
+							<p class="card-text">Adds the ability to track buffs and debuffs on yourself as well as others, both the standard abilities as well as many special buffs like enchants, gear procs, and cooldowns.</p>
+						</div>
+						<div class="card-footer text-muted">
+							<div class="btn-group">
+								<button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#modal-srendarr">Recommended Settings</button>
+								<button type="button" class="btn btn-sm btn-outline-secondary"><a href="https://www.esoui.com/downloads/info655-Srendarr-AuraBuffDebuffTracker.html" target="_blank">View Website</a></button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 mb-4">
+					<div class="card mb-4 box-shadow h-100">
+						<img class="card-img-top" src="img/ui/votansearch.jpg" alt="Votan's Search Box">
+						<div class="card-body">
+							<h5 class="card-title">Votan's Search Box</h5>
+							<p class="card-text">This add-on enables the built-in search box of the inventory and decorates it, so that it fits the ESO style much better. This addon can be used stand-alone or with Advanced Filters.</p>
+						</div>
+						<div class="card-footer text-muted">
+							<div class="btn-group">
+								<button type="button" class="btn btn-sm btn-outline-secondary"><a href="https://www.esoui.com/downloads/info914-VotansSearchBox.html" target="_blank">View Website</a></button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 mb-4">
+					<div class="card mb-4 box-shadow h-100">
+						<img class="card-img-top" src="img/ui/advancedfilters.jpg" alt="Advanced Filters">
+						<div class="card-body">
+							<h5 class="card-title">Advanced Filters</h5>
+							<p class="card-text">Subfilters to find exactly what you're looking for! Main inventory, personal bank, guild bank, guild store, vendors, and craft bag support!</p>
+						</div>
+						<div class="card-footer text-muted">
+							<div class="btn-group">
+								<button type="button" class="btn btn-sm btn-outline-secondary"><a href="https://www.esoui.com/downloads/info2215-AdvancedFilters-Updated.html" target="_blank">View Website</a></button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 mb-4">
+					<div class="card mb-4 box-shadow h-100">
+						<img class="card-img-top" src="img/ui/bagspace.jpg" alt="Bag Space Indicator">
+						<div class="card-body">
+							<h5 class="card-title">Bag Space Indicator</h5>
+							<p class="card-text">This is a small add-on that makes a rather minor change to the UI to show both the player and bank free space and maximum size, and how much gold the character has.</p>
+						</div>
+						<div class="card-footer text-muted">
+							<div class="btn-group">
+								<button type="button" class="btn btn-sm btn-outline-secondary"><a href="https://www.esoui.com/downloads/info1181-BagSpaceIndicator.html" target="_blank">View Website</a></button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 mb-4">
+					<div class="card mb-4 box-shadow h-100">
+						<img class="card-img-top" src="img/ui/questtrack.png" alt="Ravalox's Quest Tracker">
+						<div class="card-body">
+							<h5 class="card-title">Ravalox's Quest Tracker*</h5>
+							<p class="card-text">Provides A more intuitive QUEST TRACKER than the in-game provided tracker interface. The interface can be left on the screen or hidden via settings or /slash commands.</p>
+						</div>
+						<div class="card-footer text-muted">
+							<div class="btn-group">
+								<button type="button" class="btn btn-sm btn-outline-secondary"><a href="https://www.esoui.com/downloads/info13-RavaloxQuestTracker.html" target="_blank">View Website</a></button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 mb-4">
+					<div class="card mb-4 box-shadow h-100">
+						<img class="card-img-top" src="img/ui/miat.jpg" alt="Miat's Stealth Text">
+						<div class="card-body">
+							<h5 class="card-title">Miat's Stealth Text*</h5>
+							<p class="card-text">A simple addon that changes the scale and color of your stealth and disguise state messages in the center of your screen.</p>
+						</div>
+						<div class="card-footer text-muted">
+							<div class="btn-group">
+								<button type="button" class="btn btn-sm btn-outline-secondary"><a href="https://www.esoui.com/downloads/info1650-MiatsStealthText.html" target="_blank">View Website</a></button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 mb-4">
+					<div class="card mb-4 box-shadow h-100">
+						<img class="card-img-top" src="img/ui/skillpoint.jpg" alt="Ulrich's Skill Point Finder">
+						<div class="card-body">
+							<h5 class="card-title">Ulrich's Skill Point Finder</h5>
+							<p class="card-text">Provides a graphical interface showing all of the skill points you have (and haven't) earned throughout the entire game. You can show or hide the window by binding a hotkey or by entering the slash command.</p>
+						</div>
+						<div class="card-footer text-muted">
+							<div class="btn-group">
+								<button type="button" class="btn btn-sm btn-outline-secondary"><a href="https://www.esoui.com/downloads/info1863-UrichsSkillPointFinder.html" target="_blank">View Website</a></button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section><!-- END #ui -->
+
+	<section id="map">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 mb-4">
+					<h2>Map Addons</h2>
+				</div>
+				<div class="col-md-4 mb-4">
+					<div class="card mb-4 box-shadow h-100">
+						<img class="card-img-top" src="img/map/mappins.png" alt="Map Pins">
+						<div class="card-body">
+							<h5 class="card-title">Map Pins</h5>
+							<p class="card-text">Adds just about everything you need on a map to the map. Find you skyshards, lore books (but not eidetic memories), treasure maps and more.</p>
+						</div>
+						<div class="card-footer text-muted">
+							<div class="btn-group">
+								<button type="button" class="btn btn-sm btn-outline-secondary"><a href="https://www.esoui.com/downloads/info1881-MapPins.html" target="_blank">View Website</a></button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 mb-4">
+					<div class="card mb-4 box-shadow h-100">
+						<img class="card-img-top" src="img/map/questmap.jpg" alt="Quest Map">
+						<div class="card-body">
+							<h5 class="card-title">Quest Map</h5>
+							<p class="card-text">Adds pins for completed and uncompleted quests to the world map. (Including quests you haven't started yet!).</p>
+						</div>
+						<div class="card-footer text-muted">
+							<div class="btn-group">
+								<button type="button" class="btn btn-sm btn-outline-secondary"><a href="https://www.esoui.com/downloads/info1022-QuestMap.html" target="_blank">View Website</a></button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 mb-4">
+					<div class="card mb-4 box-shadow h-100">
+						<img class="card-img-top" src="img/map/lorebooks.jpg" alt="Lore Books">
+						<div class="card-body">
+							<h5 class="card-title">Lore Books</h5>
+							<p class="card-text">Pins on maps of all books of the game. Divided into 3 filters Unknown Lorebooks, Collected Lorebooks, Eidetic Memory.</p>
+						</div>
+						<div class="card-footer text-muted">
+							<div class="btn-group">
+								<button type="button" class="btn btn-sm btn-outline-secondary"><a href="https://www.esoui.com/downloads/info288-LoreBooks.html" target="_blank">View Website</a></button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 mb-4">
+					<div class="card mb-4 box-shadow h-100">
+						<img class="card-img-top" src="img/map/harvestmap.png" alt="Harvest Map">
+						<div class="card-body">
+							<h5 class="card-title">Harvest Map</h5>
+							<p class="card-text">HarvestMap displays resource nodes, chests and fishing spots on map, compass and the 3d world.</p>
+						</div>
+						<div class="card-footer text-muted">
+							<div class="btn-group">
+								<button type="button" class="btn btn-sm btn-outline-secondary"><a href="https://www.esoui.com/downloads/info57-HarvestMap.html" target="_blank">View Website</a></button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section><!-- END #map -->
+
+	<section id="crafting">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 mb-4">
+					<h2>Crafting Addons</h2>
+				</div>
+				<div class="col-md-4 mb-4">
+					<div class="card mb-4 box-shadow h-100">
+						<img class="card-img-top" src="img/crafting/lazywrit.png" alt="Dolgubon's Lazy Writ Crafter">
+						<div class="card-body">
+							<h5 class="card-title">Dolgubon's Lazy Writ Crafter</h5>
+							<p class="card-text">This addon automatically crafts all of your writs (except for alchemy and provisioning), provided you have the materials either on your toon or in the bank. Easy XP and Money!</p>
+						</div>
+						<div class="card-footer text-muted">
+							<div class="btn-group">
+								<button type="button" class="btn btn-sm btn-outline-secondary"><a href="https://www.esoui.com/downloads/info1346-DolgubonsLazyWritCrafter.html" target="_blank">View Website</a></button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 mb-4">
+					<div class="card mb-4 box-shadow h-100">
+						<img class="card-img-top" src="img/crafting/dailyprov.png" alt="Daily Provisioning">
+						<div class="card-body">
+							<h5 class="card-title">Daily Provisioning*</h5>
+							<p class="card-text">It is a simple add-on to automatically create an Provisioning Daily Writs.</p>
+						</div>
+						<div class="card-footer text-muted">
+							<div class="btn-group">
+								<button type="button" class="btn btn-sm btn-outline-secondary"><a href="https://www.esoui.com/downloads/info1901-DailyProvisioning.html" target="_blank">View Website</a></button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 mb-4">
+					<div class="card mb-4 box-shadow h-100">
+						<img class="card-img-top" src="img/crafting/dailyalch.png" alt="Daily Alchemy">
+						<div class="card-body">
+							<h5 class="card-title">Daily Alchemy*</h5>
+							<p class="card-text">It is a simple add-on to automatically create an Alchemist's Daily Writs.</p>
+						</div>
+						<div class="card-footer text-muted">
+							<div class="btn-group">
+								<button type="button" class="btn btn-sm btn-outline-secondary"><a href="https://www.esoui.com/downloads/info1899-DailyAlchemy.html" target="_blank">View Website</a></button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 mb-4">
+					<div class="card mb-4 box-shadow h-100">
+						<img class="card-img-top" src="img/crafting/craftstore.png" alt="CraftStore">
+						<div class="card-body">
+							<h5 class="card-title">CraftStore*</h5>
+							<p class="card-text">Tracks all of your known traits, styles, recipes and blueprints so you know what to look for. Ugly interface, but handy.</p>
+						</div>
+						<div class="card-footer text-muted">
+							<div class="btn-group">
+								<button type="button" class="btn btn-sm btn-outline-secondary"><a href="https://www.esoui.com/downloads/info1590-CraftStoreStonethorn.html" target="_blank">View Website</a></button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section><!-- END #crafting -->
+
+	<section id="combat">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 mb-4">
+					<h2>Combat Addons</h2>
+				</div>
+				<div class="col-md-4 mb-4">
+					<div class="card mb-4 box-shadow h-100">
+						<img class="card-img-top" src="img/combat/codecombat.png" alt="Code's Combat Alerts">
+						<div class="card-body">
+							<h5 class="card-title">Code's Combat Alerts</h5>
+							<p class="card-text">Code's Combat Alerts provides notifications and alerts for a selection of PvE mechanics. Know exactly when you need to dodge, block or interrupt an attack!</p>
+						</div>
+						<div class="card-footer text-muted">
+							<div class="btn-group">
+								<button type="button" class="btn btn-sm btn-outline-secondary"><a href="https://www.esoui.com/downloads/info1855-CodesCombatAlerts.html" target="_blank">View Website</a></button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 mb-4">
+					<div class="card mb-4 box-shadow h-100">
+						<img class="card-img-top" src="img/combat/raid.png" alt="RaidNotifier">
+						<div class="card-body">
+							<h5 class="card-title">RaidNotifier</h5>
+							<p class="card-text">Does the same thing as Code's Combad Alerts, but for raids (which Code's doesn't handle). Never get one-shot by a raid boss again.</p>
+						</div>
+						<div class="card-footer text-muted">
+							<div class="btn-group">
+								<button type="button" class="btn btn-sm btn-outline-secondary"><a href="https://www.esoui.com/downloads/info1355-RaidNotifierUpdated.html" target="_blank">View Website</a></button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 mb-4">
+					<div class="card mb-4 box-shadow h-100">
+						<img class="card-img-top" src="img/combat/action.jpg" alt="Action Duration Reminder">
+						<div class="card-body">
+							<h5 class="card-title">Action Duration Reminder</h5>
+							<p class="card-text">This addon tracks your sloted actions that have duration attributes or over time effects, reminds you to re-invoke your actions, and makes you good at performing rotations.</p>
+						</div>
+						<div class="card-footer text-muted">
+							<div class="btn-group">
+								<button type="button" class="btn btn-sm btn-outline-secondary"><a href="https://www.esoui.com/downloads/info1536-ActionDurationReminder.html" target="_blank">View Website</a></button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 mb-4">
+					<div class="card mb-4 box-shadow h-100">
+						<img class="card-img-top" src="img/combat/dressing.jpg" alt="DressingRoom">
+						<div class="card-body">
+							<h5 class="card-title">DressingRoom*</h5>
+							<p class="card-text">Create loadouts in game. Equip your gear and select your skills with one click or key press. Focused on functionality and responsiveness. <strong>*NOTE*</strong>: The current version (0.10.3) is broken, but the previous version (0.10.2) can be downloaded and installed manually.</p>
+						</div>
+						<div class="card-footer text-muted">
+							<div class="btn-group">
+								<button type="button" class="btn btn-sm btn-outline-secondary"><a href="https://www.esoui.com/downloads/info2138-DressingRoomforStonethorn.html" target="_blank">View Website</a></button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section><!-- END #combat -->
+
+	<section id="misc">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 mb-4">
+					<h2>Misc. Addons</h2>
+				</div>
+				<div class="col-md-4 mb-4">
+					<div class="card mb-4 box-shadow h-100">
+						<img class="card-img-top" src="img/misc/beam.png" alt="BeamMeUp - Teleporter (Fast Travel)">
+						<div class="card-body">
+							<h5 class="card-title">BeamMeUp - Teleporter (Fast Travel)*</h5>
+							<p class="card-text">This addon allows you to use the fast travel functionality of the game in a comfortable and highly costumizable way. <strong>*NOTE*</strong>: To take full advantage of this addon, you must join at least one of their guilds.</p>
+						</div>
+						<div class="card-footer text-muted">
+							<div class="btn-group">
+								<button type="button" class="btn btn-sm btn-outline-secondary"><a href="https://www.esoui.com/downloads/info2143-BeamMeUp-TeleporterFastTravel.html" target="_blank">View Website</a></button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 mb-4">
+					<div class="card mb-4 box-shadow h-100">
+						<img class="card-img-top" src="img/misc/loot.png" alt="Loot Log">
+						<div class="card-body">
+							<h5 class="card-title">Loot Log*</h5>
+							<p class="card-text">Loot Log helps players track their loot drops and those of group members. Includes a searchable, filterable loot log winddow.</p>
+						</div>
+						<div class="card-footer text-muted">
+							<div class="btn-group">
+								<button type="button" class="btn btn-sm btn-outline-secondary"><a href="https://www.esoui.com/downloads/info1455-LootLog.html" target="_blank">View Website</a></button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 mb-4">
+					<div class="card mb-4 box-shadow h-100">
+						<img class="card-img-top" src="img/misc/essential.jpg" alt="Essential Housing Tools">
+						<div class="card-body">
+							<h5 class="card-title">Essential Housing Tools*</h5>
+							<p class="card-text">Professional editing tools, Copy & Paste, Automatic Backups, Animation and Automation just got better. When you get your house, this will help decorate it.</p>
+						</div>
+						<div class="card-footer text-muted">
+							<div class="btn-group">
+								<button type="button" class="btn btn-sm btn-outline-secondary"><a href="https://www.esoui.com/downloads/info1959-EssentialHousingTools.html" target="_blank">View Website</a></button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section><!-- END #misc -->
+
+	<section id="libs">
+		<div class="container">
+			<div class="row">
+				<div class="col-12  mb-4">
+					<h2>Necessary Additional Files</h2>
+					<p>All of these files must be installed to use the addons above. I suggest installing them all even if you aren't using the addon that requires one of these files. This way, should you decide to try a new addon, you'll already have the necessary library.</p>
+					<ul class="card-columns">
+						<li>libCommonInventoryFilters</li>
+						<li>LibTextFilter</li>
+						<li>LibMediaProvider</li>
+						<li>LibAddonMenu</li>
+						<li>LibCustomMenu</li>
+						<li>LibGroupSocket</li>
+						<li>LibMapPins</li>
+						<li>LibGPS</li>
+						<li>LibMapPing</li>
+						<li>LibDebugLogger</li>
+						<li>LibChatMessage</li>
+						<li>LibQuestData</li>
+						<li>LibMsgWin</li>
+						<li>CustomCompassPins</li>
+						<li>LibUespQuestData</li>
+						<li>LibLazyCrafting</li>
+						<li>LibStub</li>
+						<li>LibMarify</li>
+						<li>LibBinaryEncode</li>
+						<li>LibDialog</li>
+						<li>LibSlashCommander</li>
+						<li>LibZone</li>
+						<li>LibFilters</li>
+						<li>LibMotifCategories</li>
+						<li>LibHarvensAddonSettings</li>
+						<li>LibAsync</li>
+						<li>LibMainMenu-2.0</li>
+				</div>
+			</div>
+		</div>
+	</section><!-- END #libs -->
+
+</main>
+
+<div aria-hidden="true" aria-labelledby="myModalLabel" class="modal fade" id="modal-install" role="dialog" tabindex="-1">
+	<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+		<div class="modal-content">
+			<div class="modal-body mb-0 p-0">
+				<img src="img/minion/changedirectory.png" alt="" style="width:100%">
+			</div>
+			<div class="modal-footer">
+				<button class="btn btn-outline-primary btn-rounded btn-md ml-4 text-center" data-dismiss="modal" type="button">Close</button>
+			</div>
 		</div>
 	</div>
-	<div class="navbar-end">
-		<div class="navbar-item">
-			* means optional addon
+</div>
+
+<div aria-hidden="true" aria-labelledby="myModalLabel" class="modal fade" id="modal-uncheck" role="dialog" tabindex="-1">
+	<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+		<div class="modal-content">
+			<div class="modal-body mb-0 p-0">
+				<img src="img/minion/uncheck.png" alt="" style="width:100%">
+			</div>
+			<div class="modal-footer">
+				<button class="btn btn-outline-primary btn-rounded btn-md ml-4 text-center" data-dismiss="modal" type="button">Close</button>
+			</div>
 		</div>
 	</div>
-</nav>
-<!-- END NAV -->
+</div>
 
-<section class="hero is-bold" id="top">
-	<div class="hero-body">
-		<div class="container has-text-centered">
-			<p class="title">Recommended ESO Addons</p>
-			<p class="subtitle">This is a curated list of addons I found to be the most helpful in ESO so far. You can either choose to install them all, and enable/disable the ones you like in game, or simply install the ones that do not include an * beside it's name.</p>
+<div aria-hidden="true" aria-labelledby="myModalLabel" class="modal fade" id="modal-games" role="dialog" tabindex="-1">
+	<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+		<div class="modal-content">
+			<div class="modal-body mb-0 p-0">
+				<img src="img/minion/miniongames.png" alt="" style="width:100%">
+			</div>
+			<div class="modal-footer">
+				<button class="btn btn-outline-primary btn-rounded btn-md ml-4 text-center" data-dismiss="modal" type="button">Close</button>
+			</div>
 		</div>
 	</div>
-</section><!-- END .hero -->
+</div>
 
-<div class="container">
+<div aria-hidden="true" aria-labelledby="myModalLabel" class="modal fade" id="modal-drives" role="dialog" tabindex="-1">
+	<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+		<div class="modal-content">
+			<div class="modal-body mb-0 p-0">
+				<img src="img/minion/miniondrives.png" alt="" style="width:100%">
+			</div>
+			<div class="modal-footer">
+				<button class="btn btn-outline-primary btn-rounded btn-md ml-4 text-center" data-dismiss="modal" type="button">Close</button>
+			</div>
+		</div>
+	</div>
+</div>
 
-	<div class="section" id="minion">
-		<div class="columns">
-			<div class="column is-full">
-				<h1 class="title">Installing Minion</h1>
-				<p>Minion makes installing addons for ESO very simple. It isn't required, but it is the recommended way to install addons into the game. Should you wish to manually install addons, you'll have to download all of the addons, extra dependencies, and extra library files needed then extract them into the following folder: <code>C:\Users\YOUR-USERNAME\Documents\Elder Scrolls Online\live\AddOns</code>. The rest of this section will cover how to install and configure Minion.</p><br />
-				<ol>
-					<li>Head over to the <a href="https://minion.gg/?download">Minion Download Page</a> and download the <strong>32-bit Version Installer</strong>. Save the file to your Desktop so it will be easy to find.</li>
-					<li>Navigate to you desktop, right-click on <strong>Minion3.0.5-32bit.exe</strong>, then left click on "Run as administrator."</li>
-					<li>Change the installation folder for Minion. Since all of my games install to my G Drive, I placed it there. You should pick either your C or D drives, depending on your computer. <a class="modal-button" data-target="modal-install">View Image</a></li>
-					<li>Uncheck "Launch Minion" on the final page and click "Finish". <a class="modal-button" data-target="modal-uncheck">View Image</a></li>
-					<li>Follow the instructions here to allow Minion through the Windows firewall: <a href="https://www.dummies.com/computers/operating-systems/windows-10/how-to-change-windows-10-firewall-settings-to-allow-certain-programs/" target="new">How to Change Windows 10 Firewall Settings to Allow Certain Programs</a></li>
-					<li>Right-click on Minion in your Start menu and choose "Run as administrator" then allow the program to update. Relaunch minion by running it as administrator again.</li>
-					<li>One the main Minion page, uncheck World of Warcraft from the games list and check "Remember settings" at the bottom, then click contine. <a class="modal-button" data-target="modal-games">View Image</a></li>
-					<li>One the following page, select or deselect the hard drives you need. In my case, I have games installed to C and D, so I left those selected. Check "Remember settings" at the bottom and click continue. <a class="modal-button" data-target="modal-drives">View Image</a></li>
-					<li>One the last screen that pops up, click on Elder Scrolls Online and navigate the new window to this location: <code>C:\Users\YOUR-USERNAME\Documents\Elder Scrolls Online\live\AddOns</code>. Be sure to replace "YOUR-USERNAME" with your actual Windows username select the correct folder under "Documents". <a class="modal-button" data-target="modal-folder">View Image</a></li>
-					<li>Install everything that you want from the sections below by clicking on "Find More" and searching for the name of the addon or library.</li>
-				</ol>
+<div aria-hidden="true" aria-labelledby="myModalLabel" class="modal fade" id="modal-folder" role="dialog" tabindex="-1">
+	<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+		<div class="modal-content">
+			<div class="modal-body mb-0 p-0">
+				<img src="img/minion/minionaddonfolder.png" alt="" style="width:100%">
+			</div>
+			<div class="modal-footer">
+				<button class="btn btn-outline-primary btn-rounded btn-md ml-4 text-center" data-dismiss="modal" type="button">Close</button>
 			</div>
 		</div>
-	</div><!-- END #minion -->
+	</div>
+</div>
 
-	<div class="section" id="ui">
-		<div class="columns">
-			<div class="column is-full">
-				<h1 class="title">UI Addons</h1>
-			</div>
-		</div>
-		<div class="row columns is-multiline">
-			<div class="column is-4">
-				<div class="card card-equal-height is-shady">
-					<div class="card-image">
-						<figure class="image">
-							<img src="img/ui/darkui.png" alt="DarkUI">
-						</figure>
-					</div>
-					<div class="card-content">
-						<p class="title has-text-centered">DarkUI</p>
-						<div class="content">
-							<p>This addon is a reskin of many of the default ESO textures to a smoother and more subdued UI. DarkUI focuses only on changing textures to improve the look and feel of ESO while being compatible with all other addons and having no performance impact.</p>
-						</div>
-					</div>
-					<div class="card-footer">
-						<p class="card-footer-item">
-							<span class="button is-link modal-button" data-target="modal-darkui">Recommended Settings</span>
-						</p>
-						<p class="card-footer-item">
-							<span class="button is-link modal-button"><a href="https://www.esoui.com/downloads/info1576-DarkUI.html" target="_blank">View Website</a></span>
-						</p>
-					</div>
-				</div>
-			</div>
-			<div class="column is-4">
-				<div class="card card-equal-height is-shady">
-					<div class="card-image">
-						<figure class="image">
-							<img src="img/ui/lui.png" alt="Lui Extended">
-						</figure>
-					</div>
-					<div class="card-content">
-						<p class="title has-text-centered">Lui Extended</p>
-						<div class="content">
-							<p>LUI Extended is an addon that adds multiple custom components including: Base Game enhancements, Buff & Debuff Tracking, Combat Info, and much more!</p>
-						</div>
-					</div>
-					<div class="card-footer">
-						<p class="card-footer-item">
-							<span class="button is-link modal-button" data-target="modal-lui">Recommended Settings</span>
-						</p>
-						<p class="card-footer-item">
-							<span class="button is-link modal-button"><a href="https://www.esoui.com/downloads/info818-LuiExtended.html" target="_blank">View Website</a></span>
-						</p>
-					</div>
-				</div>
-			</div>
-			<div class="column is-4">
-				<div class="card card-equal-height is-shady">
-					<div class="card-image">
-						<figure class="image">
-							<img src="img/ui/srendarr.jpg" alt="S'Rendarr">
-						</figure>
-					</div>
-					<div class="card-content">
-						<p class="title has-text-centered">S'Rendarr</p>
-						<div class="content">
-							<p>Adds the ability to track buffs and debuffs on yourself as well as others, both the standard abilities as well as many special buffs like enchants, gear procs, and cooldowns.</p>
-						</div>
-					</div>
-					<div class="card-footer">
-						<p class="card-footer-item">
-							<span class="button is-link modal-button" data-target="modal-srendarr">Recommended Settings</span>
-						</p>
-						<p class="card-footer-item">
-							<span class="button is-link modal-button"><a href="https://www.esoui.com/downloads/info655-Srendarr-AuraBuffDebuffTracker.html" target="_blank">View Website</a></span>
-						</p>
-					</div>
-				</div>
-			</div>
-			<div class="column is-4">
-				<div class="card card-equal-height is-shady">
-					<div class="card-image">
-						<figure class="image">
-							<img src="img/ui/votansearch.jpg" alt="Votan's Search Box">
-						</figure>
-					</div>
-					<div class="card-content">
-						<p class="title has-text-centered">Votan's Search Box</p>
-						<div class="content">
-							<p>This add-on enables the built-in search box of the inventory and decorates it, so that it fits the ESO style much better. This addon can be used stand-alone or with Advanced Filters.</p>
-						</div>
-					</div>
-					<div class="card-footer">
-						<p class="card-footer-item">
-							<span class="button is-link modal-button"><a href="https://www.esoui.com/downloads/info914-VotansSearchBox.html" target="_blank">View Website</a></span>
-						</p>
-					</div>
-				</div>
-			</div>
-			<div class="column is-4">
-				<div class="card card-equal-height is-shady">
-					<div class="card-image">
-						<figure class="image">
-							<img src="img/ui/advancedfilters.jpg" alt="Advanced Filters">
-						</figure>
-					</div>
-					<div class="card-content">
-						<p class="title has-text-centered">Advanced Filters</p>
-						<div class="content">
-							<p>Subfilters to find exactly what you're looking for! Main inventory, personal bank, guild bank, guild store, vendors, and craft bag support!</p>
-						</div>
-					</div>
-					<div class="card-footer">
-						<p class="card-footer-item">
-							<span class="button is-link modal-button"><a href="https://www.esoui.com/downloads/info2215-AdvancedFilters-Updated.html" target="_blank">View Website</a></span>
-						</p>
-					</div>
-				</div>
-			</div>
-			<div class="column is-4">
-				<div class="card card-equal-height is-shady">
-					<div class="card-image">
-						<figure class="image">
-							<img src="img/ui/bagspace.jpg" alt="Bag Space Indicator">
-						</figure>
-					</div>
-					<div class="card-content">
-						<p class="title has-text-centered">Bag Space Indicator</p>
-						<div class="content">
-							<p>This is a small add-on that makes a rather minor change to the UI to show both the player and bank free space and maximum size, and how much gold the character has.</p>
-						</div>
-					</div>
-					<div class="card-footer">
-						<p class="card-footer-item">
-							<span class="button is-link modal-button"><a href="https://www.esoui.com/downloads/info1181-BagSpaceIndicator.html" target="_blank">View Website</a></span>
-						</p>
-					</div>
-				</div>
-			</div>
-			<div class="column is-4">
-				<div class="card card-equal-height is-shady">
-					<div class="card-image">
-						<figure class="image">
-							<img src="img/ui/questtrack.png" alt="Ravalox's Quest Tracker">
-						</figure>
-					</div>
-					<div class="card-content">
-						<p class="title has-text-centered">Ravalox's Quest Tracker*</p>
-						<div class="content">
-							<p>Provides A more intuitive QUEST TRACKER than the in-game provided tracker interface. The interface can be left on the screen or hidden via settings or /slash commands.</p>
-						</div>
-					</div>
-					<div class="card-footer">
-						<p class="card-footer-item">
-							<span class="button is-link modal-button"><a href="https://www.esoui.com/downloads/info13-RavaloxQuestTracker.html" target="_blank">View Website</a></span>
-						</p>
-					</div>
-				</div>
-			</div>
-			<div class="column is-4">
-				<div class="card card-equal-height is-shady">
-					<div class="card-image">
-						<figure class="image">
-							<img src="img/ui/miat.jpg" alt="Miat's Stealth Text">
-						</figure>
-					</div>
-					<div class="card-content">
-						<p class="title has-text-centered">Miat's Stealth Text*</p>
-						<div class="content">
-							<p>A simple addon that changes the scale and color of your stealth and disguise state messages in the center of your screen.</p>
-						</div>
-					</div>
-					<div class="card-footer">
-						<p class="card-footer-item">
-							<span class="button is-link modal-button"><a href="https://www.esoui.com/downloads/info1650-MiatsStealthText.html" target="_blank">View Website</a></span>
-						</p>
-					</div>
-				</div>
-			</div>
-			<div class="column is-4">
-				<div class="card card-equal-height is-shady">
-					<div class="card-image">
-						<figure class="image">
-							<img src="img/ui/skillpoint.jpg" alt="Ulrich's Skill Point Finder">
-						</figure>
-					</div>
-					<div class="card-content">
-						<p class="title has-text-centered">Ulrich's Skill Point Finder*</p>
-						<div class="content">
-							<p>Provides a graphical interface showing all of the skill points you have (and haven't) earned throughout the entire game. You can show or hide the window by binding a hotkey or by entering the slash command.</p>
-						</div>
-					</div>
-					<div class="card-footer">
-						<p class="card-footer-item">
-							<span class="button is-link modal-button"><a href="https://www.esoui.com/downloads/info1863-UrichsSkillPointFinder.html" target="_blank">View Website</a></span>
-						</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div><!--END #ui -->
-
-	<div class="section" id="map">
-		<div class="columns">
-			<div class="column is-full">
-				<h1 class="title">Map Addons</h1>
-			</div>
-		</div>
-		<div class="row columns is-multiline">
-			<div class="column is-4">
-				<div class="card card-equal-height is-shady">
-					<div class="card-image">
-						<figure class="image">
-							<img src="img/map/mappins.png" alt="Map Pins">
-						</figure>
-					</div>
-					<div class="card-content">
-						<p class="title has-text-centered">Map Pins</p>
-						<div class="content">
-							<p>Adds just about everything you need on a map to the map. Find you skyshards, lore books (but not eidetic memories), treasure maps and more.</p>
-						</div>
-					</div>
-					<div class="card-footer">
-						<p class="card-footer-item">
-							<span class="button is-link modal-button"><a href="https://www.esoui.com/downloads/info1881-MapPins.html" target="_blank">View Website</a></span>
-						</p>
-					</div>
-				</div>
-			</div>
-			<div class="column is-4">
-				<div class="card card-equal-height is-shady">
-					<div class="card-image">
-						<figure class="image">
-							<img src="img/map/questmap.jpg" alt="Quest Map">
-						</figure>
-					</div>
-					<div class="card-content">
-						<p class="title has-text-centered">Quest Map</p>
-						<div class="content">
-							<p>Adds pins for completed and uncompleted quests to the world map. (Including quests you haven't started yet!).</p>
-						</div>
-					</div>
-					<div class="card-footer">
-						<p class="card-footer-item">
-							<span class="button is-link modal-button"><a href="https://www.esoui.com/downloads/info1022-QuestMap.html" target="_blank">View Website</a></span>
-						</p>
-					</div>
-				</div>
-			</div>
-			<div class="column is-4">
-				<div class="card card-equal-height is-shady">
-					<div class="card-image">
-						<figure class="image">
-							<img src="img/map/lorebooks.jpg" alt="Lore Books">
-						</figure>
-					</div>
-					<div class="card-content">
-						<p class="title has-text-centered">Lore Books</p>
-						<div class="content">
-							<p>Pins on maps of all books of the game. Divided into 3 filters Unknown Lorebooks, Collected Lorebooks, Eidetic Memory.</p>
-						</div>
-					</div>
-					<div class="card-footer">
-						<p class="card-footer-item">
-							<span class="button is-link modal-button"><a href="https://www.esoui.com/downloads/info288-LoreBooks.html" target="_blank">View Website</a></span>
-						</p>
-					</div>
-				</div>
-			</div>
-			<div class="column is-4">
-				<div class="card card-equal-height is-shady">
-					<div class="card-image">
-						<figure class="image">
-							<img src="img/map/harvestmap.png" alt="Harvest Map">
-						</figure>
-					</div>
-					<div class="card-content">
-						<p class="title has-text-centered">Harvest Map</p>
-						<div class="content">
-							<p>HarvestMap displays resource nodes, chests and fishing spots on map, compass and the 3d world.</p>
-						</div>
-					</div>
-					<div class="card-footer">
-						<p class="card-footer-item">
-							<span class="button is-link modal-button"><a href="https://www.esoui.com/downloads/info57-HarvestMap.html" target="_blank">View Website</a></span>
-						</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div><!--END #map -->
-
-	<div class="section" id="crafting">
-		<div class="columns">
-			<div class="column is-full">
-				<h1 class="title">Crafting Addons</h1>
-			</div>
-		</div>
-		<div class="row columns is-multiline">
-			<div class="column is-4">
-				<div class="card card-equal-height is-shady">
-					<div class="card-image">
-						<figure class="image">
-							<img src="img/crafting/lazywrit.png" alt="Dolgubon's Lazy Writ Crafter">
-						</figure>
-					</div>
-					<div class="card-content">
-						<p class="title has-text-centered">Dolgubon's Lazy Writ Crafter</p>
-						<div class="content">
-							<p>This addon automatically crafts all of your writs (except for alchemy and provisioning), provided you have the materials either on your toon or in the bank. Easy XP and Money!</p>
-						</div>
-					</div>
-					<div class="card-footer">
-						<p class="card-footer-item">
-							<span class="button is-link modal-button"><a href="https://www.esoui.com/downloads/info1346-DolgubonsLazyWritCrafter.html" target="_blank">View Website</a></span>
-						</p>
-					</div>
-				</div>
-			</div>
-			<div class="column is-4">
-				<div class="card card-equal-height is-shady">
-					<div class="card-image">
-						<figure class="image">
-							<img src="img/crafting/dailyprov.png" alt="Daily Provisioning">
-						</figure>
-					</div>
-					<div class="card-content">
-						<p class="title has-text-centered">Daily Provisioning*</p>
-						<div class="content">
-							<p>It is a simple add-on to automatically create an Provisioning Daily Writs.</p>
-						</div>
-					</div>
-					<div class="card-footer">
-						<p class="card-footer-item">
-							<span class="button is-link modal-button"><a href="https://www.esoui.com/downloads/info1901-DailyProvisioning.html" target="_blank">View Website</a></span>
-						</p>
-					</div>
-				</div>
-			</div>
-			<div class="column is-4">
-				<div class="card card-equal-height is-shady">
-					<div class="card-image">
-						<figure class="image">
-							<img src="img/crafting/dailyalch.png" alt="Daily Alchemy">
-						</figure>
-					</div>
-					<div class="card-content">
-						<p class="title has-text-centered">Daily Alchemy*</p>
-						<div class="content">
-							<p>It is a simple add-on to automatically create an Alchemist's Daily Writs.</p>
-						</div>
-					</div>
-					<div class="card-footer">
-						<p class="card-footer-item">
-							<span class="button is-link modal-button"><a href="https://www.esoui.com/downloads/info1899-DailyAlchemy.html" target="_blank">View Website</a></span>
-						</p>
-					</div>
-				</div>
-			</div>
-			<div class="column is-4">
-				<div class="card card-equal-height is-shady">
-					<div class="card-image">
-						<figure class="image">
-							<img src="img/crafting/craftstore.png" alt="CraftStore">
-						</figure>
-					</div>
-					<div class="card-content">
-						<p class="title has-text-centered">CraftStore*</p>
-						<div class="content">
-							<p>Tracks all of your known traits, styles, recipes and blueprints so you know what to look for. Ugly interface, but handy.</p>
-						</div>
-					</div>
-					<div class="card-footer">
-						<p class="card-footer-item">
-							<span class="button is-link modal-button"><a href="https://www.esoui.com/downloads/info1590-CraftStoreStonethorn.html" target="_blank">View Website</a></span>
-						</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div><!-- END #crafting -->
-
-	<div class="section" id="combat">
-		<div class="columns">
-			<div class="column is-full">
-				<h1 class="title">Combat Addons</h1>
-			</div>
-		</div>
-		<div class="row columns is-multiline">
-			<div class="column is-4">
-				<div class="card card-equal-height is-shady">
-					<div class="card-image">
-						<figure class="image">
-							<img src="img/combat/codecombat.png" alt="Code's Combat Alerts">
-						</figure>
-					</div>
-					<div class="card-content">
-						<p class="title has-text-centered">Code's Combat Alerts</p>
-						<div class="content">
-							<p>Code's Combat Alerts provides notifications and alerts for a selection of PvE mechanics. Know exactly when you need to dodge, block or interrupt an attack!</p>
-						</div>
-					</div>
-					<div class="card-footer">
-						<p class="card-footer-item">
-							<span class="button is-link modal-button"><a href="https://www.esoui.com/downloads/info1855-CodesCombatAlerts.html" target="_blank">View Website</a></span>
-						</p>
-					</div>
-				</div>
-			</div>
-			<div class="column is-4">
-				<div class="card card-equal-height is-shady">
-					<div class="card-image">
-						<figure class="image">
-							<img src="img/combat/raid.png" alt="RaidNotifier">
-						</figure>
-					</div>
-					<div class="card-content">
-						<p class="title has-text-centered">RaidNotifier</p>
-						<div class="content">
-							<p>Does the same thing as Code's Combad Alerts, but for raids (which Code's doesn't handle). Never get one-shot by a raid boss again.</p>
-						</div>
-					</div>
-					<div class="card-footer">
-						<p class="card-footer-item">
-							<span class="button is-link modal-button"><a href="https://www.esoui.com/downloads/info1355-RaidNotifierUpdated.html" target="_blank">View Website</a></span>
-						</p>
-					</div>
-				</div>
-			</div>
-			<div class="column is-4">
-				<div class="card card-equal-height is-shady">
-					<div class="card-image">
-						<figure class="image">
-							<img src="img/combat/action.jpg" alt="Action Duration Reminder">
-						</figure>
-					</div>
-					<div class="card-content">
-						<p class="title has-text-centered">Action Duration Reminder</p>
-						<div class="content">
-							<p>This addon tracks your sloted actions that have duration attributes or over time effects, reminds you to re-invoke your actions, and makes you good at performing rotations.</p>
-						</div>
-					</div>
-					<div class="card-footer">
-						<p class="card-footer-item">
-							<span class="button is-link modal-button"><a href="https://www.esoui.com/downloads/info1536-ActionDurationReminder.html" target="_blank">View Website</a></span>
-						</p>
-					</div>
-				</div>
-			</div>
-			<div class="column is-4">
-				<div class="card card-equal-height is-shady">
-					<div class="card-image">
-						<figure class="image">
-							<img src="img/combat/dressing.jpg" alt="DressingRoom">
-						</figure>
-					</div>
-					<div class="card-content">
-						<p class="title has-text-centered">Dressing Room*</p>
-						<div class="content">
-							<p>Create loadouts in game. Equip your gear and select your skills with one click or key press. Focused on functionality and responsiveness. <strong>*NOTE*</strong>: The current version (0.10.3) is broken, but the previous version (0.10.2) can be downloaded and installed manually.</p>
-						</div>
-					</div>
-					<div class="card-footer">
-						<p class="card-footer-item">
-							<span class="button is-link modal-button"><a href="https://www.esoui.com/downloads/info2138-DressingRoomforStonethorn.html" target="_blank">View Website</a></span>
-						</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div><!-- END #combat -->
-
-	<div class="section" id="misc">
-		<div class="columns">
-			<div class="column is-full">
-				<h1 class="title">Misc. Addons</h1>
-			</div>
-		</div>
-		<div class="row columns is-multiline">
-			<div class="column is-4">
-				<div class="card card-equal-height is-shady">
-					<div class="card-image">
-						<figure class="image">
-							<img src="img/misc/beam.png" alt="BeamMeUp - Teleporter (Fast Travel)">
-						</figure>
-					</div>
-					<div class="card-content">
-						<p class="title has-text-centered">BeamMeUp - Teleporter (Fast Travel)*</p>
-						<div class="content">
-							<p>This addon allows you to use the fast travel functionality of the game in a comfortable and highly costumizable way. <strong>*NOTE*</strong>: To take full advantage of this addon, you must join at least one of their guilds.</p>
-						</div>
-					</div>
-					<div class="card-footer">
-						<p class="card-footer-item">
-							<span class="button is-link modal-button"><a href="https://www.esoui.com/downloads/info2143-BeamMeUp-TeleporterFastTravel.html" target="_blank">View Website</a></span>
-						</p>
-					</div>
-				</div>
-			</div>
-			<div class="column is-4">
-				<div class="card card-equal-height is-shady">
-					<div class="card-image">
-						<figure class="image">
-							<img src="img/misc/loot.png" alt="Loot Log">
-						</figure>
-					</div>
-					<div class="card-content">
-						<p class="title has-text-centered">Loot Log*</p>
-						<div class="content">
-							<p>Loot Log helps players track their loot drops and those of group members. Includes a searchable, filterable loot log winddow.</p>
-						</div>
-					</div>
-					<div class="card-footer">
-						<p class="card-footer-item">
-							<span class="button is-link modal-button"><a href="https://www.esoui.com/downloads/info1455-LootLog.html" target="_blank">View Website</a></span>
-						</p>
-					</div>
-				</div>
-			</div>
-			<div class="column is-4">
-				<div class="card card-equal-height is-shady">
-					<div class="card-image">
-						<figure class="image">
-							<img src="img/misc/essential.jpg" alt="Essential Housing Tools">
-						</figure>
-					</div>
-					<div class="card-content">
-						<p class="title has-text-centered">Essential Housing Tools*</p>
-						<div class="content">
-							<p>Professional editing tools, Copy & Paste, Automatic Backups, Animation and Automation just got better. When you get your house, this will help decorate it.</p>
-						</div>
-					</div>
-					<div class="card-footer">
-						<p class="card-footer-item">
-							<span class="button is-link modal-button"><a href="https://www.esoui.com/downloads/info1959-EssentialHousingTools.html" target="_blank">View Website</a></span>
-						</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div><!-- END #misc -->
-
-	<div class="section" id="libs">
-		<div class="columns">
-			<div class="column is-full">
-				<h1 class="title">Necessary Additional Files</h1>
-				<p>All of these files must be installed to use the addons above. I suggest installing them all even if you aren't using the addon that requires one of these files. This way, should you decide to try a new addon, you'll already have the necessary library.</p><br />
-				<ul class="card-columns">
-					<li>libCommonInventoryFilters</li>
-					<li>LibTextFilter</li>
-					<li>LibMediaProvider</li>
-					<li>LibAddonMenu</li>
-					<li>LibCustomMenu</li>
-					<li>LibGroupSocket</li>
-					<li>LibMapPins</li>
-					<li>LibGPS</li>
-					<li>LibMapPing</li>
-					<li>LibDebugLogger</li>
-					<li>LibChatMessage</li>
-					<li>LibQuestData</li>
-					<li>LibMsgWin</li>
-					<li>CustomCompassPins</li>
-					<li>LibUespQuestData</li>
-					<li>LibLazyCrafting</li>
-					<li>LibStub</li>
-					<li>LibMarify</li>
-					<li>LibBinaryEncode</li>
-					<li>LibDialog</li>
-					<li>LibSlashCommander</li>
-					<li>LibZone</li>
-					<li>LibFilters</li>
-					<li>LibMotifCategories</li>
-					<li>LibHarvensAddonSettings</li>
-					<li>LibAsync</li>
-					<li>LibMainMenu</li>
-					<li>LibTableFunctions-1.0</li>
+<div aria-hidden="true" aria-labelledby="myModalLabel" class="modal fade" id="modal-darkui" role="dialog" tabindex="-1">
+	<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+        <h5 class="modal-title">DarkUI Recommended Settings</h5>
+      </div>
+			<div class="modal-body">
+				<p>These are the settings that I found to work best when combining DarkUI with Lui Extended. Any settings not listed below can be left as the default or you can experiment to find what works best for you.</p>
+				<ul>
+					<li>Glossy Bars: Off</li>
+					<li>Theme Attribute Bar Overlay: Off</li>
+					<li>Low Transparency BG: Off</li>
+					<li>Hide Status Meter BG: Off</li>
+					<li>Smoother BG by Pulsor: Off</li>
+					<li>Radial Menu Skooma: Off</li>
+					<li>Quickslot Radial Menu: Dark</li>
+					<li>Angled Compass Ends: Off</li>
+					<li>Hide Group Frame BG: Off</li>
+					<li>DarkUI Interact Key: Off</li>
+					<li>Gamepad: Off (only if you aren't using a controller to play)</li>
 				</ul>
 			</div>
-		</div>
-	</div><!-- END #minion -->
-
-	<!-- Image modal -->
-	<div id="modal-install" class="modal modal-fx-3dSlit">
-		<div class="modal-background"></div>
-		<div class="modal-content is-huge is-image">
-			<!-- content -->
-			<img src="img/minion/changedirectory.png" alt="image">
-			<!-- end content -->
-		</div>
-		<button class="modal-close is-large" aria-label="close"></button>
-	</div>
-
-	<!-- Image modal -->
-	<div id="modal-uncheck" class="modal modal-fx-3dSlit">
-		<div class="modal-background"></div>
-		<div class="modal-content is-huge is-image">
-			<!-- content -->
-			<img src="img/minion/uncheck.png" alt="image">
-			<!-- end content -->
-		</div>
-		<button class="modal-close is-large" aria-label="close"></button>
-	</div>
-
-	<!-- Image modal -->
-	<div id="modal-games" class="modal modal-fx-3dSlit">
-		<div class="modal-background"></div>
-		<div class="modal-content is-huge is-image">
-			<!-- content -->
-			<img src="img/minion/miniongames.png" alt="image">
-			<!-- end content -->
-		</div>
-		<button class="modal-close is-large" aria-label="close"></button>
-	</div>
-
-	<!-- Image modal -->
-	<div id="modal-drives" class="modal modal-fx-3dSlit">
-		<div class="modal-background"></div>
-		<div class="modal-content is-huge is-image">
-			<!-- content -->
-			<img src="img/minion/miniondrives.png" alt="image">
-			<!-- end content -->
-		</div>
-		<button class="modal-close is-large" aria-label="close"></button>
-	</div>
-
-	<!-- Image modal -->
-	<div id="modal-folder" class="modal modal-fx-3dSlit">
-		<div class="modal-background"></div>
-		<div class="modal-content is-huge is-image">
-			<!-- content -->
-			<img src="img/minion/minionaddonfolder.png" alt="image">
-			<!-- end content -->
-		</div>
-		<button class="modal-close is-large" aria-label="close"></button>
-	</div>
-
-	<!-- DarkUI Modal -->
-	<div id="modal-darkui" class="modal modal-fx-3dSlit">
-		<div class="modal-background"></div>
-		<div class="modal-content">
-			<!-- content -->
-			<div class="card">
-				<header class="card-header">
-					<p class="card-header-title">DarkUI Recommended Settings</p>
-				</header>
-				<div class="card-content">
-					<div class="content">
-						<p>These are the settings that I found to work best when combining DarkUI with Lui Extended. Any settings not listed below can be left as the default or you can experiment to find what works best for you.</p>
-						<ul>
-							<li>Glossy Bars: Off</li>
-							<li>Theme Attribute Bar Overlay: Off</li>
-							<li>Low Transparency BG: Off</li>
-							<li>Hide Status Meter BG: Off</li>
-							<li>Smoother BG by Pulsor: Off</li>
-							<li>Radial Menu Skooma: Off</li>
-							<li>Quickslot Radial Menu: Dark</li>
-							<li>Angled Compass Ends: Off</li>
-							<li>Hide Group Frame BG: Off</li>
-							<li>DarkUI Interact Key: Off</li>
-							<li>Gamepad: Off (only if you aren't using a controller to play)</li>
-						</ul>
-					</div>
-				</div>
+			<div class="modal-footer">
+				<button class="btn btn-outline-primary btn-rounded btn-md ml-4 text-center" data-dismiss="modal" type="button">Close</button>
 			</div>
-			<!-- end content -->
 		</div>
-		<button class="modal-close is-large" aria-label="close"></button>
 	</div>
-	<!-- end tiny modal card -->
+</div>
 
-	<!-- Lui Extended Modal -->
-	<div id="modal-lui" class="modal modal-fx-3dSlit">
-		<div class="modal-background"></div>
+<div aria-hidden="true" aria-labelledby="myModalLabel" class="modal fade" id="modal-lui" role="dialog" tabindex="-1">
+	<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
 		<div class="modal-content">
-			<!-- content -->
-			<div class="card">
-				<header class="card-header">
-					<p class="card-header-title">Lui Extended Recommended Settings</p>
-				</header>
-				<div class="card-content">
-					<div class="content">
-						<p>There are a lot of things to tweak with this addon. These settings are the one I use along with S'Rendarr to track my buffs/debuffs, and enemy buffs/debuffs. Any settings not listed below can be left as the default or you can experiment to find what works best for you.</p>
-						<ul>
-							<li>Combat Text: Off</li>
-							<li>Unit Frames Module: On</li>
-							<li>Combat Info Module: Off</li>
-							<li>Combat Text Module: On</li>
-							<li>Buffs and Debuffs: Off</li>
-							<li>Chat Announcements Module: Off</li>
-							<li>Slash Commands Module: On</li>
-							<li>Info Panel Module: On</li>
-						</ul>
-					</div>
-				</div>
+			<div class="modal-header">
+        <h5 class="modal-title">Lui Extended Recommended Settings</h5>
+      </div>
+			<div class="modal-body">
+				<p>There are a lot of things to tweak with this addon. These settings are the one I use along with S'Rendarr to track my buffs/debuffs, and enemy buffs/debuffs. Any settings not listed below can be left as the default or you can experiment to find what works best for you.</p>
+				<ul>
+					<li>Combat Text: Off</li>
+					<li>Unit Frames Module: On</li>
+					<li>Combat Info Module: Off</li>
+					<li>Combat Text Module: On</li>
+					<li>Buffs and Debuffs: Off</li>
+					<li>Chat Announcements Module: Off</li>
+					<li>Slash Commands Module: On</li>
+					<li>Info Panel Module: On</li>
+				</ul>
 			</div>
-			<!-- end content -->
+			<div class="modal-footer">
+				<button class="btn btn-outline-primary btn-rounded btn-md ml-4 text-center" data-dismiss="modal" type="button">Close</button>
+			</div>
 		</div>
-		<button class="modal-close is-large" aria-label="close"></button>
 	</div>
-	<!-- end tiny modal card -->
+</div>
 
-	<!-- S'Rendarr Modal -->
-	<div id="modal-srendarr" class="modal modal-fx-3dSlit">
-		<div class="modal-background"></div>
+<div aria-hidden="true" aria-labelledby="myModalLabel" class="modal fade" id="modal-srendarr" role="dialog" tabindex="-1">
+	<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
 		<div class="modal-content">
-			<!-- content -->
-			<div class="card">
-				<header class="card-header">
-					<p class="card-header-title">S'Rendarr Recommended Settings</p>
-				</header>
-				<div class="card-content">
-					<div class="content">
-						<p>This is another addon that has so much customization to it. I haven't even scratched the surface with it, but these are the settings I like to maximize my information. Any settings not listed below can be left as the default or you can experiment to find what works best for you.</p>
-						<ul>
-							<li>Short Buff: Window 1</li>
-							<li>Long Buff: Window 2</li>
-							<li>Your Major Buff: Window 1</li>
-							<li>Your Minor Buff: Window 1</li>
-							<li>Your Toggled Buffs: Window 2</li>
-							<li>Your Ground Targets: Window 4</li>
-							<li>Your Enchant Procs: Window 1</li>
-							<li>Your Gear Procs: Window 1</li>
-							<li>Your Passives: Window 2</li>
-							<li>Your Debuffs: Window 3</li>
-							<li>Your Proc Cooldown: No Display</li>
-							<li>Target Buffs: Window 5</li>
-							<li>Target Debuffs: Window 6</li>
-						</ul>
-					</div>
-				</div>
+			<div class="modal-header">
+        <h5 class="modal-title">S'Rendarr Recommended Settings</h5>
+      </div>
+			<div class="modal-body">
+				<p>This is another addon that has so much customization to it. I haven't even scratched the surface with it, but these are the settings I like to maximize my information. Any settings not listed below can be left as the default or you can experiment to find what works best for you.</p>
+				<ul>
+					<li>Short Buff: Window 1</li>
+					<li>Long Buff: Window 2</li>
+					<li>Your Major Buff: Window 1</li>
+					<li>Your Minor Buff: Window 1</li>
+					<li>Your Toggled Buffs: Window 2</li>
+					<li>Your Ground Targets: Window 4</li>
+					<li>Your Enchant Procs: Window 1</li>
+					<li>Your Gear Procs: Window 1</li>
+					<li>Your Passives: Window 2</li>
+					<li>Your Debuffs: Window 3</li>
+					<li>Your Proc Cooldown: No Display</li>
+					<li>Target Buffs: Window 5</li>
+					<li>Target Debuffs: Window 6</li>
+				</ul>
 			</div>
-			<!-- end content -->
+			<div class="modal-footer">
+				<button class="btn btn-outline-primary btn-rounded btn-md ml-4 text-center" data-dismiss="modal" type="button">Close</button>
+			</div>
 		</div>
-		<button class="modal-close is-large" aria-label="close"></button>
 	</div>
-	<!-- end tiny modal card -->
+</div>
 
-	<!-- Return to Top -->
-	<a href="#top" id="return-to-top"><i class="fas fa-chevron-up"></i></a>
+<!-- Return to Top -->
+<a href="#top" id="return-to-top" title="Scroll to top"><i class="fas fa-chevron-up"></i></a>
 
-</div><!-- END .container -->
-
-<script src="https://unpkg.com/bulma-modal-fx/dist/js/modal-fx.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
