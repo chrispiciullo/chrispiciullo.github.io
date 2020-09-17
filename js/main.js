@@ -1,84 +1,43 @@
-var quickLinks = document.querySelectorAll('.navbar-start a');
+(function($) {
+	'use strict'; // Start of use strict
 
-var positionArray = [],
-	hashArray = [];
-
-for (var i = 0; i < quickLinks.length; i++) {
-	hashArray.push(quickLinks[i].href.substring(quickLinks[i].href.indexOf('#') + 1));
-}
-
-for (var i = 0; i < hashArray.length; i++) {
-	positionArray.push(document.getElementById(hashArray[i]).getBoundingClientRect().top);
-}
-
-function isActive1() {
-	document.getElementsByClassName('is-active')[0];
-}
-
-document.addEventListener('scroll', scrollHandler, true);
-
-function scrollHandler() {
-	currentScrollPosition = document.documentElement.scrollTop;
-	//currentActivePosition = document.getElementsByClassName('is-active')[0].getBoundingClientRect().top;
-
-	for (var i = 1; i <= positionArray.length; i++) {
-		if (currentScrollPosition >= positionArray[i - 1] && currentScrollPosition < positionArray[i]) {
-			var currentActive = document.getElementsByClassName('is-active')[0];
-
-			if (currentActive != undefined) {
-				currentActive.classList.remove('is-active');
-			}
-
-			quickLinks[i - 1].classList.add('is-active');
-
-			break;
-		}
-
-		if (currentScrollPosition > positionArray[positionArray.length - 1]) {
-			var currentActive = document.getElementsByClassName('is-active');
-
-			var currentActive = document.getElementsByClassName('is-active')[0];
-
-			if (currentActive != undefined) {
-				currentActive.classList.remove('is-active');
-			}
-			quickLinks[quickLinks.length - 1].classList.add('is-active');
-
-			break;
-		}
-	}
-}
-
-for (var i = 0; i < quickLinks.length; i++) {
-	quickLinks[i].addEventListener('click', function(event) {
-		document.removeEventListener('scroll', scrollHandler, true);
-
-		/**
-		for (var j=0; j<quickLinks.length; j++){
-			if (quickLinks[j].classList.contains('is-active')){
-				quickLinks[j].classList.remove('is-active');
+	// Smooth scrolling using jQuery easing
+	$('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {
+		if (
+			location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') &&
+			location.hostname == this.hostname
+		) {
+			var target = $(this.hash);
+			target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+			if (target.length) {
+				$('html, body').animate(
+					{
+						scrollTop: target.offset().top - 56
+					},
+					1000,
+					'easeInOutExpo'
+				);
+				return false;
 			}
 		}
-		**/
-
-		isActive = document.getElementsByClassName('is-active')[0];
-
-		if (isActive != undefined) {
-			isActive.classList.remove('is-active');
-		}
-
-		this.classList.add('is-active');
-
-		setTimeout(function() {
-			document.addEventListener('scroll', scrollHandler, true);
-		}, 600);
 	});
-}
+
+	// Closes responsive menu when a scroll trigger link is clicked
+	$('.js-scroll-trigger').click(function() {
+		$('.navbar-collapse').collapse('hide');
+	});
+
+	// Activate scrollspy to add active class to navbar items on scroll
+	$('body').scrollspy({
+		target: '#mainNav',
+		offset: 56
+	});
+})(jQuery); // End of use strict
 
 //Get the button
 var mybutton = document.getElementById('return-to-top');
 
-// When the user scrolls down 20px from the top of the document, show the button
+// When the user scrolls down 50px from the top of the document, show the button
 window.onscroll = function() {
 	scrollFunction();
 };
